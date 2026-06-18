@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lacquer&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Inter;
+}
+
+.light {
+  background-color: #f5f0eb;
+  color: #3b2a1a;
+}
+
+.dark {
+  background-color: #810B38;
+  color: #F1E2D1;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.light button {
+  background-color: #c9a882;
+  color: #3b2a1a;
+}
+
+.dark button {
+  background-color: #DCC3AA;
+  color: #541A1A;
+}
+
+button:hover {
+  background-color: #FF6A1C;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+select {
+  outline: none;
+  padding: 0.5rem;
+}
+
+.top {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.top h1 {
+  font-weight: 400;
+  font-family: "Lacquer";
+}
+
+.top button {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 20px;
+}
+
+#tasks {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.light .task-card {
+  background-color: white;
+  border: 1px solid #d4c4b0;
+}
+
+.dark .task-card {
+  background-color: #6b0a30;
+  border: 1px solid #a0405a;
+}
+
+.completed {
+  opacity: 0.55;
+}
+
+.completed .task-title {
+  text-decoration: line-through;
+}
+
+.light .completed .task-title {
+  color: #999;
+}
+
+.dark .completed .task-title {
+  color: #a08070;
+}
+
+.task-body {
+  flex: 1;
+}
+
+.task-title {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.task-type {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.light .task-type {
+  color: #888;
+}
+
+.dark .task-type {
+  color: #c4a080;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
