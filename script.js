@@ -85,3 +85,65 @@ const editTask = (name) => {
   catagorySelect.value = task.category;
   addTaskBtn.textContent = "Update Task";
 };
+
+const output = document.querySelector("#output");
+const captureBtn = document.querySelector("#captureBtn");
+const bubbleBtn = document.querySelector("#bubbleBtn");
+const boxesDiv = document.querySelector(".boxes");
+const grandparent = document.querySelector("#grandparent");
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+
+let isCapturing = false;
+
+captureBtn.addEventListener("click", () => {
+  isCapturing = true;
+  captureBtn.classList.add("active");
+  bubbleBtn.classList.remove("active");
+});
+
+bubbleBtn.addEventListener("click", () => {
+  isCapturing = false;
+  bubbleBtn.classList.add("active");
+  captureBtn.classList.remove("active");
+});
+
+boxesDiv.addEventListener("click", () => {
+  output.innerHTML = "";
+}, true);
+
+grandparent.addEventListener("click", () => {
+  if (isCapturing === true) {
+    output.innerHTML += "Grandparent<br>";
+  }
+}, true);
+
+parent.addEventListener("click", () => {
+  if (isCapturing === true) {
+    output.innerHTML += "Parent<br>";
+  }
+}, true);
+
+child.addEventListener("click", () => {
+  if (isCapturing === true) {
+    output.innerHTML += "Child<br>";
+  }
+}, true);
+
+grandparent.addEventListener("click", () => {
+  if (isCapturing === false) {
+    output.innerHTML += "Grandparent<br>";
+  }
+}, false);
+
+parent.addEventListener("click", () => {
+  if (isCapturing === false) {
+    output.innerHTML += "Parent<br>";
+  }
+}, false);
+
+child.addEventListener("click", () => {
+  if (isCapturing === false) {
+    output.innerHTML += "Child<br>";
+  }
+}, false);
