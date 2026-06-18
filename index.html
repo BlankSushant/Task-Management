@@ -31,8 +31,58 @@
         </div>
 
         <div class="event-propagation">
-            
+            <h2>Event Propagation</h2>
+            <div class="mode-btns">
+                <button id="captureBtn">Capturing</button>
+                <button id="bubbleBtn" class="active">Bubbling</button>
+            </div>
+            <div class="boxes">
+                <div id="grandparent">
+                    Grandparent
+                    <div id="parent">
+                        Parent
+                        <div id="child">
+                            Child
+                            <button id="clickMe">Click Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="output"></div>
         </div>
+
+        <div class="explanation">
+            <h3>Browser Rendering Pipeline</h3>
+
+            <div class="pipeline-flow">
+                <div class="pipeline-card">
+                    <p>HTML</p>
+                    <p>↓</p>
+                    <p>Parsing</p>
+                    <p>↓</p>
+                    <p>Tokenization</p>
+                    <p>↓</p>
+                    <p>DOM Tree</p>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="pipeline-card">
+                    <p>CSS</p>
+                    <p>↓</p>
+                    <p>CSSOM</p>
+                </div>
+
+                <span class="arrow">→</span>
+
+                <div class="pipeline-card">
+                    <p>DOM Tree + CSSOM</p>
+                    <p>↓</p>
+                    <p>Render Tree</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="script.js"></script>
