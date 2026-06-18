@@ -1,4 +1,4 @@
-# Task Manager Demo
+# Task Manager
 
 This project is a small front-end demo built with **HTML, CSS, and JavaScript**. It combines three things in one page:
 
@@ -10,7 +10,7 @@ This project is a small front-end demo built with **HTML, CSS, and JavaScript**.
 
 ## 1) Source files
 
-### `index(2).html`
+### `index.html`
 This file defines the page structure:
 
 - A top header with the app title and theme toggle button.
@@ -28,7 +28,7 @@ This file defines the page structure:
   - CSS → CSSOM,
   - DOM tree + CSSOM → render tree.
 
-### `script(1).js`
+### `script.js`
 This file provides the interactivity:
 
 - Loads tasks from `localStorage`.
@@ -44,7 +44,7 @@ This file provides the interactivity:
   - bubbling mode,
   - output log for the order in which events fire.
 
-### `style(2).css`
+### `style.css`
 This file controls the visual design:
 
 - Global reset for spacing and sizing.
